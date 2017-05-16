@@ -49,6 +49,17 @@ Below is a simple example (borrowed from SimpleExpressionCalculator, which can b
             _sm.WhenIn(State.InOperator).On(Input.Digit, Input.EndOfExpression).Goto(State.Operator); // End-state
         }
         
+        private Input GetCharacterCategory(char c)
+        {
+            string separator = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+
+            if (Char.IsDigit(c)) return Input.Digit;
+            if (c == '+' || c == '-' || c == '/' || c == '*') return Input.Operator;
+            else if (c == '\n') return Input.EndOfExpression;
+
+            throw new InvalidInputException(c, _position);
+        }        
+        
         // Rest of the class omitted for brevity
     }
 ```
