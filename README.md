@@ -8,7 +8,7 @@ Either clone the repo from GitHub or download the NuGet package (look for Finite
 - [Quickstart](#quickstart)
 
 ## Quickstart
-Using the FSM is pretty straightforward. States and inputs are defined as enums. State transitions have provisions for guard conditions and optional actions, to be performed when transitioning from one state to another. 
+Using the FSM is pretty straightforward. States and inputs are defined as enums. Every transition has provisions for guard conditions and entry actions. 
 
 Below is a simple example (borrowed from SimpleExpressionCalculator, which can be found in its entirety on GitHub)
 
@@ -68,3 +68,6 @@ Below is a simple example (borrowed from SimpleExpressionCalculator, which can b
 This example illustrates a number of important principles:
 1. The state machine always has to be initialized.
 2. All input is categorized.
+3. When a transition doesn't change the current state, the next state can be omitted.
+4. Every transition has to be unique.
+
