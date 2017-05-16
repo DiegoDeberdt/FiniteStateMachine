@@ -106,9 +106,4 @@ namespace Deberdt.Yarp.SimpleExpressionCalculator
 
 ```
 
-This example illustrates a number of important principles:
-1. The state machine always has to be initialized.
-2. All input is categorized.
-3. When a transition doesn't change the current state, the next state can be omitted.
-4. Every transition has to be unique.
 
