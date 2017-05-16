@@ -33,6 +33,7 @@ Below is a simple example (borrowed from SimpleExpressionCalculator, which can b
 
     class ExpressionScanner
     {
+        private string _expression;
         private FiniteStateMachine<State, Input> _sm = new FiniteStateMachine<State, Input>();
 
         public ExpressionScanner(string expression)
