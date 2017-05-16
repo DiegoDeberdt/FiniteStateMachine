@@ -65,3 +65,6 @@ Below is a simple example (borrowed from SimpleExpressionCalculator, which can b
     }
 ```
 
+This example illustrates a number of important principles:
+1. The state machine always has to be initialized.
+2. All input is categorized.
